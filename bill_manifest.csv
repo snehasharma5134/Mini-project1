@@ -1,0 +1,211 @@
+﻿filename,category,bill_type,provider,bill_date,due_date,synthetic,source
+bill_001_electricity.pdf,Bill,Electricity,North Valley Power Services,2025-04-15,2025-05-07,True,Generated for this assignment; not an external dataset
+bill_002_electricity.pdf,Bill,Electricity,North Valley Power Services,2025-01-28,2025-02-17,True,Generated for this assignment; not an external dataset
+bill_003_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2025-06-09,2025-06-24,True,Generated for this assignment; not an external dataset
+bill_004_electricity.pdf,Bill,Electricity,North Valley Power Services,2026-07-04,2026-07-17,True,Generated for this assignment; not an external dataset
+bill_005_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2025-10-24,2025-11-06,True,Generated for this assignment; not an external dataset
+bill_006_electricity.pdf,Bill,Electricity,Metro Power Distribution,2025-03-15,2025-04-05,True,Generated for this assignment; not an external dataset
+bill_007_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2025-11-29,2025-12-23,True,Generated for this assignment; not an external dataset
+bill_008_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2025-08-06,2025-08-28,True,Generated for this assignment; not an external dataset
+bill_009_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2026-08-22,2026-09-09,True,Generated for this assignment; not an external dataset
+bill_010_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2025-06-13,2025-07-07,True,Generated for this assignment; not an external dataset
+bill_011_electricity.pdf,Bill,Electricity,Metro Power Distribution,2025-10-01,2025-10-25,True,Generated for this assignment; not an external dataset
+bill_012_electricity.pdf,Bill,Electricity,Metro Power Distribution,2026-06-04,2026-06-17,True,Generated for this assignment; not an external dataset
+bill_013_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2026-09-06,2026-09-23,True,Generated for this assignment; not an external dataset
+bill_014_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2025-03-29,2025-04-21,True,Generated for this assignment; not an external dataset
+bill_015_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2026-06-25,2026-07-16,True,Generated for this assignment; not an external dataset
+bill_016_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2026-04-08,2026-04-21,True,Generated for this assignment; not an external dataset
+bill_017_electricity.pdf,Bill,Electricity,North Valley Power Services,2025-03-02,2025-03-17,True,Generated for this assignment; not an external dataset
+bill_018_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2026-08-08,2026-08-29,True,Generated for this assignment; not an external dataset
+bill_019_electricity.pdf,Bill,Electricity,Metro Power Distribution,2026-02-25,2026-03-16,True,Generated for this assignment; not an external dataset
+bill_020_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2025-05-24,2025-06-11,True,Generated for this assignment; not an external dataset
+bill_021_electricity.pdf,Bill,Electricity,North Valley Power Services,2026-07-08,2026-07-20,True,Generated for this assignment; not an external dataset
+bill_022_electricity.pdf,Bill,Electricity,Metro Power Distribution,2025-01-03,2025-01-21,True,Generated for this assignment; not an external dataset
+bill_023_electricity.pdf,Bill,Electricity,Metro Power Distribution,2026-07-10,2026-07-22,True,Generated for this assignment; not an external dataset
+bill_024_electricity.pdf,Bill,Electricity,Metro Power Distribution,2025-03-24,2025-04-07,True,Generated for this assignment; not an external dataset
+bill_025_electricity.pdf,Bill,Electricity,North Valley Power Services,2026-03-06,2026-03-28,True,Generated for this assignment; not an external dataset
+bill_026_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2025-11-20,2025-12-14,True,Generated for this assignment; not an external dataset
+bill_027_electricity.pdf,Bill,Electricity,North Valley Power Services,2025-12-24,2026-01-06,True,Generated for this assignment; not an external dataset
+bill_028_electricity.pdf,Bill,Electricity,Metro Power Distribution,2025-11-03,2025-11-25,True,Generated for this assignment; not an external dataset
+bill_029_electricity.pdf,Bill,Electricity,North Valley Power Services,2025-12-18,2026-01-02,True,Generated for this assignment; not an external dataset
+bill_030_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2025-01-04,2025-01-21,True,Generated for this assignment; not an external dataset
+bill_031_electricity.pdf,Bill,Electricity,Metro Power Distribution,2025-03-19,2025-04-11,True,Generated for this assignment; not an external dataset
+bill_032_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2026-01-02,2026-01-17,True,Generated for this assignment; not an external dataset
+bill_033_electricity.pdf,Bill,Electricity,Metro Power Distribution,2026-02-27,2026-03-11,True,Generated for this assignment; not an external dataset
+bill_034_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2026-04-27,2026-05-12,True,Generated for this assignment; not an external dataset
+bill_035_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2025-10-13,2025-10-26,True,Generated for this assignment; not an external dataset
+bill_036_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2025-02-09,2025-02-22,True,Generated for this assignment; not an external dataset
+bill_037_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2025-07-14,2025-07-30,True,Generated for this assignment; not an external dataset
+bill_038_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2025-05-08,2025-05-31,True,Generated for this assignment; not an external dataset
+bill_039_electricity.pdf,Bill,Electricity,Metro Power Distribution,2025-06-28,2025-07-19,True,Generated for this assignment; not an external dataset
+bill_040_electricity.pdf,Bill,Electricity,North Valley Power Services,2025-11-26,2025-12-15,True,Generated for this assignment; not an external dataset
+bill_041_electricity.pdf,Bill,Electricity,Metro Power Distribution,2025-12-10,2025-12-23,True,Generated for this assignment; not an external dataset
+bill_042_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2025-03-16,2025-04-04,True,Generated for this assignment; not an external dataset
+bill_043_electricity.pdf,Bill,Electricity,Metro Power Distribution,2025-08-13,2025-08-27,True,Generated for this assignment; not an external dataset
+bill_044_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2026-09-02,2026-09-19,True,Generated for this assignment; not an external dataset
+bill_045_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2026-05-12,2026-06-03,True,Generated for this assignment; not an external dataset
+bill_046_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2025-05-22,2025-06-05,True,Generated for this assignment; not an external dataset
+bill_047_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2026-03-02,2026-03-14,True,Generated for this assignment; not an external dataset
+bill_048_electricity.pdf,Bill,Electricity,North Valley Power Services,2026-02-04,2026-02-22,True,Generated for this assignment; not an external dataset
+bill_049_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2025-06-19,2025-07-08,True,Generated for this assignment; not an external dataset
+bill_050_electricity.pdf,Bill,Electricity,North Valley Power Services,2025-02-21,2025-03-09,True,Generated for this assignment; not an external dataset
+bill_051_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2025-03-25,2025-04-13,True,Generated for this assignment; not an external dataset
+bill_052_electricity.pdf,Bill,Electricity,North Valley Power Services,2025-06-06,2025-06-21,True,Generated for this assignment; not an external dataset
+bill_053_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2025-04-28,2025-05-22,True,Generated for this assignment; not an external dataset
+bill_054_electricity.pdf,Bill,Electricity,North Valley Power Services,2025-03-19,2025-04-09,True,Generated for this assignment; not an external dataset
+bill_055_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2026-06-30,2026-07-18,True,Generated for this assignment; not an external dataset
+bill_056_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2026-01-06,2026-01-28,True,Generated for this assignment; not an external dataset
+bill_057_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2026-08-30,2026-09-15,True,Generated for this assignment; not an external dataset
+bill_058_electricity.pdf,Bill,Electricity,Metro Power Distribution,2025-12-11,2025-12-23,True,Generated for this assignment; not an external dataset
+bill_059_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2025-10-10,2025-10-30,True,Generated for this assignment; not an external dataset
+bill_060_electricity.pdf,Bill,Electricity,Metro Power Distribution,2025-01-18,2025-01-31,True,Generated for this assignment; not an external dataset
+bill_061_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2026-06-28,2026-07-15,True,Generated for this assignment; not an external dataset
+bill_062_electricity.pdf,Bill,Electricity,Metro Power Distribution,2025-11-20,2025-12-03,True,Generated for this assignment; not an external dataset
+bill_063_electricity.pdf,Bill,Electricity,Metro Power Distribution,2025-04-13,2025-04-28,True,Generated for this assignment; not an external dataset
+bill_064_electricity.pdf,Bill,Electricity,BrightLine Energy Utility,2025-02-25,2025-03-17,True,Generated for this assignment; not an external dataset
+bill_065_electricity.pdf,Bill,Electricity,North Valley Power Services,2025-07-08,2025-07-20,True,Generated for this assignment; not an external dataset
+bill_066_electricity.pdf,Bill,Electricity,North Valley Power Services,2025-06-02,2025-06-26,True,Generated for this assignment; not an external dataset
+bill_067_electricity.pdf,Bill,Electricity,North Valley Power Services,2026-04-07,2026-04-26,True,Generated for this assignment; not an external dataset
+bill_068_electricity.pdf,Bill,Electricity,North Valley Power Services,2025-03-25,2025-04-08,True,Generated for this assignment; not an external dataset
+bill_069_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2025-08-26,2025-09-11,True,Generated for this assignment; not an external dataset
+bill_070_electricity.pdf,Bill,Electricity,CityGrid Electricity Board,2026-07-12,2026-07-27,True,Generated for this assignment; not an external dataset
+bill_071_water.pdf,Bill,Water,Urban Water Supply Services,2025-10-23,2025-11-11,True,Generated for this assignment; not an external dataset
+bill_072_water.pdf,Bill,Water,AquaCity Water Board,2026-09-05,2026-09-17,True,Generated for this assignment; not an external dataset
+bill_073_water.pdf,Bill,Water,JalSeva Municipal Utility,2025-10-03,2025-10-24,True,Generated for this assignment; not an external dataset
+bill_074_water.pdf,Bill,Water,AquaCity Water Board,2026-04-27,2026-05-14,True,Generated for this assignment; not an external dataset
+bill_075_water.pdf,Bill,Water,ClearFlow Water Department,2026-07-18,2026-07-30,True,Generated for this assignment; not an external dataset
+bill_076_water.pdf,Bill,Water,JalSeva Municipal Utility,2026-04-19,2026-05-07,True,Generated for this assignment; not an external dataset
+bill_077_water.pdf,Bill,Water,AquaCity Water Board,2025-05-15,2025-05-31,True,Generated for this assignment; not an external dataset
+bill_078_water.pdf,Bill,Water,ClearFlow Water Department,2025-01-15,2025-02-04,True,Generated for this assignment; not an external dataset
+bill_079_water.pdf,Bill,Water,ClearFlow Water Department,2026-06-06,2026-06-29,True,Generated for this assignment; not an external dataset
+bill_080_water.pdf,Bill,Water,Urban Water Supply Services,2026-06-05,2026-06-28,True,Generated for this assignment; not an external dataset
+bill_081_water.pdf,Bill,Water,AquaCity Water Board,2025-11-02,2025-11-23,True,Generated for this assignment; not an external dataset
+bill_082_water.pdf,Bill,Water,Urban Water Supply Services,2026-07-11,2026-07-29,True,Generated for this assignment; not an external dataset
+bill_083_water.pdf,Bill,Water,Urban Water Supply Services,2026-04-30,2026-05-23,True,Generated for this assignment; not an external dataset
+bill_084_water.pdf,Bill,Water,ClearFlow Water Department,2025-04-13,2025-05-03,True,Generated for this assignment; not an external dataset
+bill_085_water.pdf,Bill,Water,Urban Water Supply Services,2025-03-24,2025-04-10,True,Generated for this assignment; not an external dataset
+bill_086_water.pdf,Bill,Water,AquaCity Water Board,2025-10-22,2025-11-06,True,Generated for this assignment; not an external dataset
+bill_087_water.pdf,Bill,Water,ClearFlow Water Department,2025-11-29,2025-12-23,True,Generated for this assignment; not an external dataset
+bill_088_water.pdf,Bill,Water,AquaCity Water Board,2025-06-24,2025-07-08,True,Generated for this assignment; not an external dataset
+bill_089_water.pdf,Bill,Water,Urban Water Supply Services,2025-09-18,2025-10-07,True,Generated for this assignment; not an external dataset
+bill_090_water.pdf,Bill,Water,AquaCity Water Board,2025-12-20,2026-01-10,True,Generated for this assignment; not an external dataset
+bill_091_water.pdf,Bill,Water,JalSeva Municipal Utility,2025-04-20,2025-05-05,True,Generated for this assignment; not an external dataset
+bill_092_water.pdf,Bill,Water,JalSeva Municipal Utility,2026-08-03,2026-08-25,True,Generated for this assignment; not an external dataset
+bill_093_water.pdf,Bill,Water,JalSeva Municipal Utility,2025-09-14,2025-10-06,True,Generated for this assignment; not an external dataset
+bill_094_water.pdf,Bill,Water,ClearFlow Water Department,2025-05-15,2025-05-28,True,Generated for this assignment; not an external dataset
+bill_095_water.pdf,Bill,Water,Urban Water Supply Services,2025-10-07,2025-10-21,True,Generated for this assignment; not an external dataset
+bill_096_water.pdf,Bill,Water,JalSeva Municipal Utility,2025-08-20,2025-09-11,True,Generated for this assignment; not an external dataset
+bill_097_water.pdf,Bill,Water,AquaCity Water Board,2025-09-26,2025-10-17,True,Generated for this assignment; not an external dataset
+bill_098_water.pdf,Bill,Water,Urban Water Supply Services,2025-08-15,2025-09-06,True,Generated for this assignment; not an external dataset
+bill_099_water.pdf,Bill,Water,JalSeva Municipal Utility,2026-05-20,2026-06-02,True,Generated for this assignment; not an external dataset
+bill_100_water.pdf,Bill,Water,AquaCity Water Board,2025-06-08,2025-06-26,True,Generated for this assignment; not an external dataset
+bill_101_water.pdf,Bill,Water,AquaCity Water Board,2026-04-01,2026-04-16,True,Generated for this assignment; not an external dataset
+bill_102_water.pdf,Bill,Water,JalSeva Municipal Utility,2025-04-04,2025-04-26,True,Generated for this assignment; not an external dataset
+bill_103_water.pdf,Bill,Water,JalSeva Municipal Utility,2025-08-01,2025-08-22,True,Generated for this assignment; not an external dataset
+bill_104_water.pdf,Bill,Water,Urban Water Supply Services,2025-09-14,2025-10-08,True,Generated for this assignment; not an external dataset
+bill_105_water.pdf,Bill,Water,ClearFlow Water Department,2025-09-29,2025-10-11,True,Generated for this assignment; not an external dataset
+bill_106_water.pdf,Bill,Water,ClearFlow Water Department,2025-04-22,2025-05-11,True,Generated for this assignment; not an external dataset
+bill_107_water.pdf,Bill,Water,JalSeva Municipal Utility,2026-03-13,2026-04-04,True,Generated for this assignment; not an external dataset
+bill_108_water.pdf,Bill,Water,ClearFlow Water Department,2026-08-23,2026-09-12,True,Generated for this assignment; not an external dataset
+bill_109_water.pdf,Bill,Water,AquaCity Water Board,2026-03-17,2026-04-05,True,Generated for this assignment; not an external dataset
+bill_110_water.pdf,Bill,Water,AquaCity Water Board,2025-11-17,2025-12-09,True,Generated for this assignment; not an external dataset
+bill_111_water.pdf,Bill,Water,AquaCity Water Board,2026-01-17,2026-02-10,True,Generated for this assignment; not an external dataset
+bill_112_water.pdf,Bill,Water,JalSeva Municipal Utility,2026-09-07,2026-09-23,True,Generated for this assignment; not an external dataset
+bill_113_water.pdf,Bill,Water,AquaCity Water Board,2025-04-28,2025-05-22,True,Generated for this assignment; not an external dataset
+bill_114_water.pdf,Bill,Water,AquaCity Water Board,2025-10-01,2025-10-13,True,Generated for this assignment; not an external dataset
+bill_115_water.pdf,Bill,Water,JalSeva Municipal Utility,2025-05-26,2025-06-18,True,Generated for this assignment; not an external dataset
+bill_116_water.pdf,Bill,Water,Urban Water Supply Services,2025-11-16,2025-12-09,True,Generated for this assignment; not an external dataset
+bill_117_water.pdf,Bill,Water,Urban Water Supply Services,2026-03-30,2026-04-21,True,Generated for this assignment; not an external dataset
+bill_118_water.pdf,Bill,Water,JalSeva Municipal Utility,2025-04-24,2025-05-10,True,Generated for this assignment; not an external dataset
+bill_119_water.pdf,Bill,Water,Urban Water Supply Services,2025-08-05,2025-08-29,True,Generated for this assignment; not an external dataset
+bill_120_water.pdf,Bill,Water,JalSeva Municipal Utility,2026-01-25,2026-02-14,True,Generated for this assignment; not an external dataset
+bill_121_water.pdf,Bill,Water,AquaCity Water Board,2026-08-13,2026-08-31,True,Generated for this assignment; not an external dataset
+bill_122_water.pdf,Bill,Water,ClearFlow Water Department,2026-01-06,2026-01-19,True,Generated for this assignment; not an external dataset
+bill_123_water.pdf,Bill,Water,AquaCity Water Board,2025-12-14,2025-12-29,True,Generated for this assignment; not an external dataset
+bill_124_water.pdf,Bill,Water,ClearFlow Water Department,2025-06-01,2025-06-16,True,Generated for this assignment; not an external dataset
+bill_125_water.pdf,Bill,Water,Urban Water Supply Services,2026-05-21,2026-06-09,True,Generated for this assignment; not an external dataset
+bill_126_water.pdf,Bill,Water,JalSeva Municipal Utility,2025-11-07,2025-12-01,True,Generated for this assignment; not an external dataset
+bill_127_water.pdf,Bill,Water,ClearFlow Water Department,2025-10-21,2025-11-03,True,Generated for this assignment; not an external dataset
+bill_128_water.pdf,Bill,Water,AquaCity Water Board,2025-07-12,2025-07-29,True,Generated for this assignment; not an external dataset
+bill_129_water.pdf,Bill,Water,AquaCity Water Board,2025-06-26,2025-07-08,True,Generated for this assignment; not an external dataset
+bill_130_water.pdf,Bill,Water,Urban Water Supply Services,2026-09-05,2026-09-17,True,Generated for this assignment; not an external dataset
+bill_131_water.pdf,Bill,Water,JalSeva Municipal Utility,2026-09-10,2026-09-24,True,Generated for this assignment; not an external dataset
+bill_132_water.pdf,Bill,Water,JalSeva Municipal Utility,2026-01-21,2026-02-12,True,Generated for this assignment; not an external dataset
+bill_133_water.pdf,Bill,Water,ClearFlow Water Department,2025-07-04,2025-07-19,True,Generated for this assignment; not an external dataset
+bill_134_water.pdf,Bill,Water,Urban Water Supply Services,2026-07-07,2026-07-30,True,Generated for this assignment; not an external dataset
+bill_135_water.pdf,Bill,Water,Urban Water Supply Services,2025-06-19,2025-07-12,True,Generated for this assignment; not an external dataset
+bill_136_water.pdf,Bill,Water,Urban Water Supply Services,2025-09-02,2025-09-18,True,Generated for this assignment; not an external dataset
+bill_137_water.pdf,Bill,Water,AquaCity Water Board,2026-03-05,2026-03-19,True,Generated for this assignment; not an external dataset
+bill_138_water.pdf,Bill,Water,JalSeva Municipal Utility,2026-06-13,2026-06-26,True,Generated for this assignment; not an external dataset
+bill_139_water.pdf,Bill,Water,AquaCity Water Board,2025-12-24,2026-01-05,True,Generated for this assignment; not an external dataset
+bill_140_water.pdf,Bill,Water,JalSeva Municipal Utility,2025-11-23,2025-12-06,True,Generated for this assignment; not an external dataset
+bill_141_internet.pdf,Bill,Internet,SkyNet Broadband Services,2025-01-06,2025-01-19,True,Generated for this assignment; not an external dataset
+bill_142_internet.pdf,Bill,Internet,FiberWave Internet,2025-10-23,2025-11-07,True,Generated for this assignment; not an external dataset
+bill_143_internet.pdf,Bill,Internet,FiberWave Internet,2026-05-27,2026-06-17,True,Generated for this assignment; not an external dataset
+bill_144_internet.pdf,Bill,Internet,FiberWave Internet,2025-09-04,2025-09-25,True,Generated for this assignment; not an external dataset
+bill_145_internet.pdf,Bill,Internet,SkyNet Broadband Services,2026-06-04,2026-06-24,True,Generated for this assignment; not an external dataset
+bill_146_internet.pdf,Bill,Internet,SkyNet Broadband Services,2025-12-20,2026-01-04,True,Generated for this assignment; not an external dataset
+bill_147_internet.pdf,Bill,Internet,ConnectPlus Telecom,2025-06-29,2025-07-23,True,Generated for this assignment; not an external dataset
+bill_148_internet.pdf,Bill,Internet,FiberWave Internet,2025-07-26,2025-08-07,True,Generated for this assignment; not an external dataset
+bill_149_internet.pdf,Bill,Internet,ConnectPlus Telecom,2025-07-15,2025-07-31,True,Generated for this assignment; not an external dataset
+bill_150_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-01-31,2026-02-17,True,Generated for this assignment; not an external dataset
+bill_151_internet.pdf,Bill,Internet,FastLink Digital Networks,2025-03-22,2025-04-09,True,Generated for this assignment; not an external dataset
+bill_152_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-04-02,2026-04-23,True,Generated for this assignment; not an external dataset
+bill_153_internet.pdf,Bill,Internet,FastLink Digital Networks,2025-10-09,2025-10-31,True,Generated for this assignment; not an external dataset
+bill_154_internet.pdf,Bill,Internet,FastLink Digital Networks,2026-03-25,2026-04-06,True,Generated for this assignment; not an external dataset
+bill_155_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-04-06,2026-04-23,True,Generated for this assignment; not an external dataset
+bill_156_internet.pdf,Bill,Internet,FiberWave Internet,2025-04-27,2025-05-09,True,Generated for this assignment; not an external dataset
+bill_157_internet.pdf,Bill,Internet,FastLink Digital Networks,2025-10-20,2025-11-12,True,Generated for this assignment; not an external dataset
+bill_158_internet.pdf,Bill,Internet,FiberWave Internet,2025-12-22,2026-01-14,True,Generated for this assignment; not an external dataset
+bill_159_internet.pdf,Bill,Internet,ConnectPlus Telecom,2025-08-18,2025-08-31,True,Generated for this assignment; not an external dataset
+bill_160_internet.pdf,Bill,Internet,FastLink Digital Networks,2026-07-19,2026-08-02,True,Generated for this assignment; not an external dataset
+bill_161_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-02-24,2026-03-17,True,Generated for this assignment; not an external dataset
+bill_162_internet.pdf,Bill,Internet,SkyNet Broadband Services,2026-07-19,2026-08-10,True,Generated for this assignment; not an external dataset
+bill_163_internet.pdf,Bill,Internet,FastLink Digital Networks,2025-11-08,2025-11-22,True,Generated for this assignment; not an external dataset
+bill_164_internet.pdf,Bill,Internet,FiberWave Internet,2026-07-19,2026-08-04,True,Generated for this assignment; not an external dataset
+bill_165_internet.pdf,Bill,Internet,SkyNet Broadband Services,2026-09-12,2026-09-29,True,Generated for this assignment; not an external dataset
+bill_166_internet.pdf,Bill,Internet,SkyNet Broadband Services,2026-03-03,2026-03-24,True,Generated for this assignment; not an external dataset
+bill_167_internet.pdf,Bill,Internet,ConnectPlus Telecom,2025-03-16,2025-04-08,True,Generated for this assignment; not an external dataset
+bill_168_internet.pdf,Bill,Internet,FastLink Digital Networks,2025-11-17,2025-12-10,True,Generated for this assignment; not an external dataset
+bill_169_internet.pdf,Bill,Internet,FiberWave Internet,2026-04-23,2026-05-06,True,Generated for this assignment; not an external dataset
+bill_170_internet.pdf,Bill,Internet,FiberWave Internet,2025-09-12,2025-09-26,True,Generated for this assignment; not an external dataset
+bill_171_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-05-26,2026-06-11,True,Generated for this assignment; not an external dataset
+bill_172_internet.pdf,Bill,Internet,FastLink Digital Networks,2025-02-19,2025-03-03,True,Generated for this assignment; not an external dataset
+bill_173_internet.pdf,Bill,Internet,FastLink Digital Networks,2025-09-28,2025-10-21,True,Generated for this assignment; not an external dataset
+bill_174_internet.pdf,Bill,Internet,SkyNet Broadband Services,2026-07-21,2026-08-06,True,Generated for this assignment; not an external dataset
+bill_175_internet.pdf,Bill,Internet,FastLink Digital Networks,2026-02-08,2026-02-25,True,Generated for this assignment; not an external dataset
+bill_176_internet.pdf,Bill,Internet,FiberWave Internet,2025-02-16,2025-02-28,True,Generated for this assignment; not an external dataset
+bill_177_internet.pdf,Bill,Internet,FastLink Digital Networks,2025-11-23,2025-12-07,True,Generated for this assignment; not an external dataset
+bill_178_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-07-31,2026-08-16,True,Generated for this assignment; not an external dataset
+bill_179_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-05-01,2026-05-17,True,Generated for this assignment; not an external dataset
+bill_180_internet.pdf,Bill,Internet,FiberWave Internet,2026-01-25,2026-02-08,True,Generated for this assignment; not an external dataset
+bill_181_internet.pdf,Bill,Internet,SkyNet Broadband Services,2026-02-27,2026-03-22,True,Generated for this assignment; not an external dataset
+bill_182_internet.pdf,Bill,Internet,FastLink Digital Networks,2025-11-29,2025-12-21,True,Generated for this assignment; not an external dataset
+bill_183_internet.pdf,Bill,Internet,ConnectPlus Telecom,2025-09-28,2025-10-19,True,Generated for this assignment; not an external dataset
+bill_184_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-05-16,2026-06-02,True,Generated for this assignment; not an external dataset
+bill_185_internet.pdf,Bill,Internet,ConnectPlus Telecom,2025-12-20,2026-01-13,True,Generated for this assignment; not an external dataset
+bill_186_internet.pdf,Bill,Internet,ConnectPlus Telecom,2025-07-26,2025-08-15,True,Generated for this assignment; not an external dataset
+bill_187_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-06-28,2026-07-13,True,Generated for this assignment; not an external dataset
+bill_188_internet.pdf,Bill,Internet,SkyNet Broadband Services,2025-01-06,2025-01-26,True,Generated for this assignment; not an external dataset
+bill_189_internet.pdf,Bill,Internet,FastLink Digital Networks,2025-03-02,2025-03-26,True,Generated for this assignment; not an external dataset
+bill_190_internet.pdf,Bill,Internet,SkyNet Broadband Services,2025-07-10,2025-08-02,True,Generated for this assignment; not an external dataset
+bill_191_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-07-11,2026-07-31,True,Generated for this assignment; not an external dataset
+bill_192_internet.pdf,Bill,Internet,FastLink Digital Networks,2025-09-21,2025-10-14,True,Generated for this assignment; not an external dataset
+bill_193_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-02-20,2026-03-10,True,Generated for this assignment; not an external dataset
+bill_194_internet.pdf,Bill,Internet,FastLink Digital Networks,2025-01-07,2025-01-23,True,Generated for this assignment; not an external dataset
+bill_195_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-01-04,2026-01-27,True,Generated for this assignment; not an external dataset
+bill_196_internet.pdf,Bill,Internet,SkyNet Broadband Services,2025-05-01,2025-05-23,True,Generated for this assignment; not an external dataset
+bill_197_internet.pdf,Bill,Internet,FiberWave Internet,2026-01-18,2026-02-05,True,Generated for this assignment; not an external dataset
+bill_198_internet.pdf,Bill,Internet,FiberWave Internet,2026-06-25,2026-07-18,True,Generated for this assignment; not an external dataset
+bill_199_internet.pdf,Bill,Internet,SkyNet Broadband Services,2026-07-04,2026-07-18,True,Generated for this assignment; not an external dataset
+bill_200_internet.pdf,Bill,Internet,FastLink Digital Networks,2026-06-07,2026-06-26,True,Generated for this assignment; not an external dataset
+bill_201_internet.pdf,Bill,Internet,FastLink Digital Networks,2025-01-23,2025-02-10,True,Generated for this assignment; not an external dataset
+bill_202_internet.pdf,Bill,Internet,FiberWave Internet,2026-07-09,2026-07-21,True,Generated for this assignment; not an external dataset
+bill_203_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-04-05,2026-04-23,True,Generated for this assignment; not an external dataset
+bill_204_internet.pdf,Bill,Internet,FiberWave Internet,2025-05-11,2025-06-03,True,Generated for this assignment; not an external dataset
+bill_205_internet.pdf,Bill,Internet,ConnectPlus Telecom,2026-01-24,2026-02-08,True,Generated for this assignment; not an external dataset
+bill_206_internet.pdf,Bill,Internet,FiberWave Internet,2025-01-17,2025-02-01,True,Generated for this assignment; not an external dataset
+bill_207_internet.pdf,Bill,Internet,SkyNet Broadband Services,2026-02-16,2026-03-07,True,Generated for this assignment; not an external dataset
+bill_208_internet.pdf,Bill,Internet,SkyNet Broadband Services,2026-08-15,2026-09-05,True,Generated for this assignment; not an external dataset
+bill_209_internet.pdf,Bill,Internet,FiberWave Internet,2026-07-25,2026-08-15,True,Generated for this assignment; not an external dataset
+bill_210_internet.pdf,Bill,Internet,FastLink Digital Networks,2026-03-03,2026-03-21,True,Generated for this assignment; not an external dataset

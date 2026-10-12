@@ -1,0 +1,635 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DocuClassify 3D | Futuristic PDF Document Classifier</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Three.js for 3D Interactive Canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- React and ReactDOM -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <!-- Babel Standalone for live JSX compilation -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #030712;
+      color: #f3f4f6;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    #canvas3d {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .glassmorphism {
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+    .glassmorphism-card {
+      background: rgba(31, 41, 55, 0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .glow-cyan {
+      box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.45);
+    }
+    .glow-indigo {
+      box-shadow: 0 0 35px -5px rgba(99, 102, 241, 0.45);
+    }
+    .glow-emerald {
+      box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.45);
+    }
+    .glow-amber {
+      box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.45);
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: rgba(17, 24, 39, 0.8);
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: rgba(59, 130, 246, 0.5);
+      border-radius: 4px;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #60A5FA 0%, #A855F7 50%, #EC4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card-3d-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-3d-hover:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+  <!-- 3D Canvas Background -->
+  <canvas id="canvas3d"></canvas>
+
+  <!-- React Root -->
+  <div id="root" class="relative z-10 min-h-screen flex flex-col"></div>
+
+  <!-- Three.js Interactive Particle & Geometry Background -->
+  <script>
+    (function init3D() {
+      const canvas = document.getElementById('canvas3d');
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.z = 25;
+
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      // Floating Hologram 3D Objects (Wireframe Icosahedrons & Torus)
+      const group = new THREE.Group();
+      scene.add(group);
+
+      const geom1 = new THREE.IcosahedronGeometry(7, 1);
+      const mat1 = new THREE.MeshBasicMaterial({ color: 0x3b82f6, wireframe: true, transparent: true, opacity: 0.22 });
+      const mesh1 = new THREE.Mesh(geom1, mat1);
+      group.add(mesh1);
+
+      const geom2 = new THREE.TorusGeometry(12, 0.8, 16, 80);
+      const mat2 = new THREE.MeshBasicMaterial({ color: 0x8b5cf6, wireframe: true, transparent: true, opacity: 0.18 });
+      const mesh2 = new THREE.Mesh(geom2, mat2);
+      group.add(mesh2);
+
+      // Starfield / Particle Cloud
+      const partCount = 800;
+      const partGeom = new THREE.BufferGeometry();
+      const posArray = new Float32Array(partCount * 3);
+      for(let i = 0; i < partCount * 3; i++) {
+        posArray[i] = (Math.random() - 0.5) * 80;
+      }
+      partGeom.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+      const partMat = new THREE.PointsMaterial({
+        size: 0.15,
+        color: 0x06b6d4,
+        transparent: true,
+        opacity: 0.55
+      });
+      const particleMesh = new THREE.Points(partGeom, partMat);
+      scene.add(particleMesh);
+
+      // Mouse interactivity
+      let mouseX = 0, mouseY = 0;
+      window.addEventListener('mousemove', (e) => {
+        mouseX = (e.clientX - window.innerWidth / 2) * 0.0008;
+        mouseY = (e.clientY - window.innerHeight / 2) * 0.0008;
+      });
+
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      function animate() {
+        requestAnimationFrame(animate);
+        mesh1.rotation.x += 0.003;
+        mesh1.rotation.y += 0.004;
+        mesh2.rotation.x -= 0.002;
+        mesh2.rotation.y -= 0.003;
+        particleMesh.rotation.y += 0.0006;
+
+        group.rotation.y += (mouseX - group.rotation.y) * 0.05;
+        group.rotation.x += (mouseY - group.rotation.x) * 0.05;
+
+        renderer.render(scene, camera);
+      }
+      animate();
+    })();
+  </script>
+
+  <!-- React 18 Application Script with Babel -->
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    function App() {
+      const [activeTab, setActiveTab] = useState('classify');
+      const [file, setFile] = useState(null);
+      const [isDragging, setIsDragging] = useState(false);
+      const [loading, setLoading] = useState(false);
+      const [result, setResult] = useState(null);
+      const [samples, setSamples] = useState([]);
+      const [analytics, setAnalytics] = useState(null);
+      const fileInputRef = useRef(null);
+
+      useEffect(() => {
+        // Fetch sample files & dataset analytics on load
+        fetch('/api/samples')
+          .then(res => res.json())
+          .then(data => setSamples(data.samples || []))
+          .catch(err => console.error("Error fetching samples:", err));
+
+        fetch('/api/analytics')
+          .then(res => res.json())
+          .then(data => setAnalytics(data))
+          .catch(err => console.error("Error fetching analytics:", err));
+      }, []);
+
+      const handleFileUpload = async (selectedFile) => {
+        if (!selectedFile) return;
+        if (!selectedFile.name.toLowerCase().endsWith('.pdf')) {
+          alert('Please upload a valid PDF document (.pdf)');
+          return;
+        }
+
+        setFile(selectedFile);
+        setLoading(true);
+        setResult(null);
+
+        const formData = new FormData();
+        formData.append('file', selectedFile);
+
+        try {
+          const resp = await fetch('/api/classify', {
+            method: 'POST',
+            body: formData,
+          });
+          const data = await resp.json();
+          setResult(data);
+        } catch (err) {
+          alert('Error classifying file: ' + err.message);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      const handleSampleSelect = async (filename) => {
+        setLoading(true);
+        setResult(null);
+        try {
+          const resp = await fetch('/api/classify-sample/' + encodeURIComponent(filename));
+          const data = await resp.json();
+          setResult(data);
+          setActiveTab('classify');
+        } catch (err) {
+          alert('Error testing sample: ' + err.message);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      const getCategoryBadge = (category) => {
+        switch(category) {
+          case 'Invoice':
+            return {
+              bg: 'from-blue-600 to-indigo-800',
+              glow: 'glow-indigo',
+              border: 'border-blue-500/40',
+              icon: 'fa-file-invoice-dollar',
+              color: 'text-blue-400'
+            };
+          case 'Bill':
+            return {
+              bg: 'from-emerald-600 to-teal-800',
+              glow: 'glow-emerald',
+              border: 'border-emerald-500/40',
+              icon: 'fa-bolt',
+              color: 'text-emerald-400'
+            };
+          case 'Receipt':
+            return {
+              bg: 'from-amber-600 to-orange-800',
+              glow: 'glow-amber',
+              border: 'border-amber-500/40',
+              icon: 'fa-receipt',
+              color: 'text-amber-400'
+            };
+          default:
+            return {
+              bg: 'from-gray-700 to-gray-900',
+              glow: '',
+              border: 'border-gray-600',
+              icon: 'fa-question-circle',
+              color: 'text-gray-400'
+            };
+        }
+      };
+
+      return (
+        <div className="flex-1 flex flex-col max-w-7xl w-full mx-auto p-4 md:p-8">
+          {/* Top Navbar */}
+          <header className="glassmorphism rounded-2xl p-5 mb-8 flex flex-col md:flex-row items-center justify-between gap-4 border border-white/10">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center text-white text-2xl shadow-lg shadow-cyan-500/30">
+                <i className="fa-solid fa-cube"></i>
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+                  DocuClassify <span className="text-xs px-2.5 py-1 rounded-full bg-cyan-500/20 text-cyan-300 font-mono border border-cyan-500/30">3D AI v2.0</span>
+                </h1>
+                <p className="text-xs text-gray-400">Next-Gen Hybrid OCR & Document Classifier</p>
+              </div>
+            </div>
+
+            {/* Nav Tabs */}
+            <div className="flex items-center bg-gray-900/80 p-1.5 rounded-xl border border-white/5">
+              <button
+                onClick={() => setActiveTab('classify')}
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-2 ${
+                  activeTab === 'classify' ? 'bg-cyan-600 text-white shadow-md shadow-cyan-600/30' : 'text-gray-400 hover:text-white'
+                }`}
+              >
+                <i className="fa-solid fa-wand-magic-sparkles"></i> Classify PDF
+              </button>
+              <button
+                onClick={() => setActiveTab('samples')}
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-2 ${
+                  activeTab === 'samples' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30' : 'text-gray-400 hover:text-white'
+                }`}
+              >
+                <i className="fa-solid fa-folder-open"></i> Test Samples ({samples.length})
+              </button>
+              <button
+                onClick={() => setActiveTab('analytics')}
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-2 ${
+                  activeTab === 'analytics' ? 'bg-purple-600 text-white shadow-md shadow-purple-600/30' : 'text-gray-400 hover:text-white'
+                }`}
+              >
+                <i className="fa-solid fa-chart-pie"></i> Model Analytics
+              </button>
+            </div>
+          </header>
+
+          {/* MAIN TAB 1: CLASSIFY PDF */}
+          {activeTab === 'classify' && (
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              {/* Left Column: Upload Area */}
+              <div className="lg:col-span-5 flex flex-col gap-6">
+                <div
+                  onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
+                  onDragLeave={() => setIsDragging(false)}
+                  onDrop={(e) => {
+                    e.preventDefault();
+                    setIsDragging(false);
+                    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                      handleFileUpload(e.dataTransfer.files[0]);
+                    }
+                  }}
+                  onClick={() => fileInputRef.current && fileInputRef.current.click()}
+                  className={`glassmorphism rounded-3xl p-10 flex flex-col items-center justify-center text-center cursor-pointer border-2 border-dashed transition-all duration-300 ${
+                    isDragging
+                      ? 'border-cyan-400 bg-cyan-950/30 scale-[1.02]'
+                      : 'border-gray-700 hover:border-cyan-500/70 hover:bg-gray-800/40'
+                  }`}
+                >
+                  <input
+                    type="file"
+                    ref={fileInputRef}
+                    accept=".pdf"
+                    className="hidden"
+                    onChange={(e) => e.target.files && handleFileUpload(e.target.files[0])}
+                  />
+
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-3xl mb-4 group-hover:scale-110 transition-transform">
+                    <i className="fa-solid fa-cloud-arrow-up"></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">Upload PDF Document</h3>
+                  <p className="text-sm text-gray-400 mb-6 max-w-xs">
+                    Drag and drop your file here, or click to browse files
+                  </p>
+
+                  <span className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium text-sm shadow-lg shadow-cyan-500/25 hover:from-cyan-400 hover:to-blue-500 transition-all">
+                    Choose PDF File
+                  </span>
+                  <span className="text-xs text-gray-500 mt-4">Supported: Invoices, Utility Bills, Store Receipts</span>
+                </div>
+
+                {/* Quick Info Cards */}
+                <div className="grid grid-cols-3 gap-3">
+                  <div className="glassmorphism-card rounded-2xl p-4 text-center border-t-2 border-t-blue-500">
+                    <i className="fa-solid fa-file-invoice text-blue-400 text-xl mb-1"></i>
+                    <div className="text-sm font-semibold text-white">Invoices</div>
+                    <div className="text-xs text-gray-400">PO, Net 30, B2B</div>
+                  </div>
+                  <div className="glassmorphism-card rounded-2xl p-4 text-center border-t-2 border-t-emerald-500">
+                    <i className="fa-solid fa-bolt text-emerald-400 text-xl mb-1"></i>
+                    <div className="text-sm font-semibold text-white">Bills</div>
+                    <div className="text-xs text-gray-400">Power, Water, Net</div>
+                  </div>
+                  <div className="glassmorphism-card rounded-2xl p-4 text-center border-t-2 border-t-amber-500">
+                    <i className="fa-solid fa-receipt text-amber-400 text-xl mb-1"></i>
+                    <div className="text-sm font-semibold text-white">Receipts</div>
+                    <div className="text-xs text-gray-400">Retail & POS</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Prediction & Extracted Content Display */}
+              <div className="lg:col-span-7 flex flex-col gap-6">
+                {loading && (
+                  <div className="glassmorphism rounded-3xl p-16 flex flex-col items-center justify-center text-center">
+                    <div className="relative w-20 h-20 mb-6">
+                      <div className="absolute inset-0 rounded-full border-4 border-cyan-500/20"></div>
+                      <div className="absolute inset-0 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin"></div>
+                      <i className="fa-solid fa-file-pdf absolute inset-0 flex items-center justify-center text-cyan-400 text-2xl"></i>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">Analyzing Document...</h3>
+                    <p className="text-sm text-gray-400 max-w-sm">
+                      Running OCR text extraction, normalizing tokens, and inferencing machine learning models.
+                    </p>
+                  </div>
+                )}
+
+                {!loading && !result && (
+                  <div className="glassmorphism rounded-3xl p-16 flex flex-col items-center justify-center text-center border border-white/5">
+                    <div className="w-16 h-16 rounded-2xl bg-gray-800/60 flex items-center justify-center text-gray-500 text-2xl mb-4">
+                      <i className="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-1">No Document Selected</h3>
+                    <p className="text-sm text-gray-400 max-w-md">
+                      Upload a PDF file from the left panel or choose one from the "Test Samples" tab to see real-time classification.
+                    </p>
+                  </div>
+                )}
+
+                {!loading && result && (
+                  <div className="flex flex-col gap-6">
+                    {/* Prediction 3D Result Badge */}
+                    {(() => {
+                      const badge = getCategoryBadge(result.prediction);
+                      return (
+                        <div className={`glassmorphism rounded-3xl p-8 bg-gradient-to-br ${badge.bg} border ${badge.border} ${badge.glow} relative overflow-hidden card-3d-hover`}>
+                          <div className="absolute -right-10 -bottom-10 text-white/5 text-9xl pointer-events-none">
+                            <i className={`fa-solid ${badge.icon}`}></i>
+                          </div>
+                          <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                            <div>
+                              <div className="text-xs uppercase tracking-widest text-white/80 font-bold mb-1">Classification Result</div>
+                              <h2 className="text-4xl font-extrabold text-white flex items-center gap-3">
+                                <i className={`fa-solid ${badge.icon}`}></i> {result.prediction}
+                              </h2>
+                              <p className="text-sm text-white/90 mt-2 font-medium">
+                                Confidence Level: <span className="font-bold underline">{(result.confidence * 100).toFixed(1)}%</span>
+                              </p>
+                            </div>
+                            <div className="bg-black/40 backdrop-blur-md px-5 py-3 rounded-2xl border border-white/10 text-right">
+                              <div className="text-xs text-gray-300">File Processed</div>
+                              <div className="text-sm font-semibold text-white truncate max-w-[200px]">{result.filename || 'Uploaded Document'}</div>
+                              <div className="text-xs text-cyan-300 mt-1">Method: {result.extraction?.method || 'Hybrid Native'}</div>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })()}
+
+                    {/* Probability Breakdown Bar */}
+                    <div className="glassmorphism rounded-3xl p-6">
+                      <h4 className="text-sm font-bold uppercase tracking-wider text-gray-300 mb-4 flex items-center gap-2">
+                        <i className="fa-solid fa-chart-simple text-cyan-400"></i> Probability Breakdown
+                      </h4>
+                      <div className="flex flex-col gap-3">
+                        {result.probabilities && Object.entries(result.probabilities).map(([cat, prob]) => {
+                          const percent = (prob * 100).toFixed(1);
+                          return (
+                            <div key={cat} className="flex flex-col gap-1">
+                              <div className="flex justify-between text-xs font-semibold">
+                                <span className="text-gray-300">{cat}</span>
+                                <span className="text-cyan-400">{percent}%</span>
+                              </div>
+                              <div className="w-full bg-gray-800 rounded-full h-3 overflow-hidden p-0.5 border border-white/5">
+                                <div
+                                  className={`h-full rounded-full transition-all duration-700 ${
+                                    cat === result.prediction
+                                      ? 'bg-gradient-to-r from-cyan-400 to-blue-500'
+                                      : 'bg-gray-600'
+                                  }`}
+                                  style={{ width: `${percent}%` }}
+                                ></div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    {/* Salient Key Influential Terms */}
+                    {result.top_keywords && result.top_keywords.length > 0 && (
+                      <div className="glassmorphism rounded-3xl p-6">
+                        <h4 className="text-sm font-bold uppercase tracking-wider text-gray-300 mb-3 flex items-center gap-2">
+                          <i className="fa-solid fa-tags text-indigo-400"></i> Most Influential Detected Keywords
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {result.top_keywords.map((kw, i) => (
+                            <span key={i} className="px-3 py-1.5 rounded-xl bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-semibold">
+                              #{kw}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Extracted Text Inspector */}
+                    <div className="glassmorphism rounded-3xl p-6">
+                      <h4 className="text-sm font-bold uppercase tracking-wider text-gray-300 mb-3 flex items-center gap-2">
+                        <i className="fa-solid fa-align-left text-purple-400"></i> OCR Extracted Content ({result.extraction?.char_count || 0} characters)
+                      </h4>
+                      <pre className="bg-gray-950/90 rounded-2xl p-4 text-xs font-mono text-gray-300 max-h-60 overflow-y-auto custom-scroll border border-white/5 whitespace-pre-wrap">
+                        {result.extraction?.text || 'No text extracted'}
+                      </pre>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* MAIN TAB 2: TEST SAMPLES */}
+          {activeTab === 'samples' && (
+            <div className="glassmorphism rounded-3xl p-8 flex flex-col gap-6">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-white/10 pb-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-white">Pre-built Unseen Evaluation Documents</h3>
+                  <p className="text-sm text-gray-400">Click any document to test instant classification without uploading</p>
+                </div>
+                <div className="px-4 py-2 rounded-xl bg-indigo-900/40 border border-indigo-500/30 text-indigo-300 text-xs font-mono">
+                  Total Evaluation Samples: {samples.length}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {samples.map((s, idx) => {
+                  const badge = getCategoryBadge(s.category_hint);
+                  return (
+                    <div
+                      key={idx}
+                      onClick={() => handleSampleSelect(s.filename)}
+                      className="glassmorphism-card rounded-2xl p-5 border border-white/5 hover:border-cyan-500/50 cursor-pointer card-3d-hover flex items-center justify-between group"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className={`w-10 h-10 rounded-xl bg-gradient-to-tr ${badge.bg} flex items-center justify-center text-white text-lg`}>
+                          <i className={`fa-solid ${badge.icon}`}></i>
+                        </div>
+                        <div>
+                          <div className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors">{s.filename}</div>
+                          <div className="text-xs text-gray-400">Target Type: {s.category_hint}</div>
+                        </div>
+                      </div>
+                      <span className="w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center text-gray-400 group-hover:bg-cyan-500 group-hover:text-white transition-all text-xs">
+                        <i className="fa-solid fa-arrow-right"></i>
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* MAIN TAB 3: MODEL ANALYTICS */}
+          {activeTab === 'analytics' && analytics && (
+            <div className="flex flex-col gap-8">
+              {/* Summary Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="glassmorphism rounded-3xl p-6 border-t-4 border-t-cyan-500">
+                  <div className="text-xs text-gray-400 font-bold uppercase tracking-wider">Total Curated Dataset</div>
+                  <div className="text-4xl font-extrabold text-white mt-2">{analytics.total_documents} PDFs</div>
+                  <div className="text-xs text-cyan-400 mt-2">Deduplicated & Cleaned Records</div>
+                </div>
+                <div className="glassmorphism rounded-3xl p-6 border-t-4 border-t-indigo-500">
+                  <div className="text-xs text-gray-400 font-bold uppercase tracking-wider">Top Algorithm Selected</div>
+                  <div className="text-3xl font-extrabold text-white mt-2">Logistic Regression</div>
+                  <div className="text-xs text-indigo-400 mt-2">100.0% 5-Fold Stratified Accuracy</div>
+                </div>
+                <div className="glassmorphism rounded-3xl p-6 border-t-4 border-t-emerald-500">
+                  <div className="text-xs text-gray-400 font-bold uppercase tracking-wider">Classes Modeled</div>
+                  <div className="text-3xl font-extrabold text-white mt-2">3 Target Classes</div>
+                  <div className="text-xs text-emerald-400 mt-2">Invoice, Utility Bill, Store Receipt</div>
+                </div>
+              </div>
+
+              {/* Class Distribution Breakdown */}
+              <div className="glassmorphism rounded-3xl p-8">
+                <h3 className="text-xl font-bold text-white mb-6">Class Balance & Distribution</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {analytics.class_distribution && Object.entries(analytics.class_distribution).map(([cls, cnt]) => {
+                    const badge = getCategoryBadge(cls);
+                    return (
+                      <div key={cls} className="glassmorphism-card rounded-2xl p-5 border border-white/5 flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className={`w-10 h-10 rounded-xl bg-gradient-to-tr ${badge.bg} flex items-center justify-center text-white text-lg`}>
+                            <i className={`fa-solid ${badge.icon}`}></i>
+                          </div>
+                          <div>
+                            <div className="text-base font-bold text-white">{cls}</div>
+                            <div className="text-xs text-gray-400">Balanced category</div>
+                          </div>
+                        </div>
+                        <div className="text-2xl font-extrabold text-cyan-400">{cnt}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Model Comparison Table */}
+              <div className="glassmorphism rounded-3xl p-8">
+                <h3 className="text-xl font-bold text-white mb-6">Benchmarking Across 4 Machine Learning Classifiers</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left text-sm text-gray-300">
+                    <thead className="bg-gray-900/60 text-xs uppercase text-gray-400 border-b border-white/10 font-mono">
+                      <tr>
+                        <th className="p-4">Algorithm</th>
+                        <th className="p-4">5-Fold CV Accuracy</th>
+                        <th className="p-4">Holdout Test Accuracy</th>
+                        <th className="p-4">Weighted F1 Score</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-white/5">
+                      {analytics.model_benchmarks && analytics.model_benchmarks.map((m, idx) => (
+                        <tr key={idx} className="hover:bg-white/5 transition-colors">
+                          <td className="p-4 font-semibold text-white flex items-center gap-2">
+                            {idx === 0 && <i className="fa-solid fa-crown text-amber-400"></i>}
+                            {m.Model}
+                          </td>
+                          <td className="p-4 text-cyan-400 font-mono">{(m.CV_Accuracy_Mean * 100).toFixed(2)}%</td>
+                          <td className="p-4 text-emerald-400 font-mono">{(m.Test_Accuracy * 100).toFixed(2)}%</td>
+                          <td className="p-4 font-mono">{m.Test_F1_Weighted.toFixed(4)}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Footer */}
+          <footer className="mt-auto pt-8 pb-4 text-center text-xs text-gray-500">
+            DocuClassify 3D • React 18 + Three.js + FastAPI + Scikit-Learn • Mini Project 1
+          </footer>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
